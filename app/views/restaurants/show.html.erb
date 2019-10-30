@@ -1,0 +1,48 @@
+<%= render 'navbar' %>
+
+<div id="show-restaurant">
+  <h1 class="text-center"><%= @restaurant.name %></h1>
+  <div class="restaurant-info">
+    <p>Address: <%= @restaurant.address %></p>
+      <% if @restaurant.phone_number %>
+        <p>Phone Number: <%= @restaurant.phone_number %></p>
+      <% else %>
+        <p>Phone Number: unavailable</p>
+      <% end %>
+    <p>Category: <%= @restaurant.category %> food</p>
+  </div>
+  <div class="text-center">
+    <% if @restaurant.reviews != [] %>
+      <div class="restaurant-review-mean">
+        <% @sum = 0 %>
+        <% @restaurant.reviews.each do |review| %>
+            <% @sum += review.rating %>
+        <% end %>
+        <%= "⭐" * (@sum / @restaurant.reviews.length) %>
+        <% if @restaurant.reviews.length == 1 %>
+          <p id="text-small"><%= @restaurant.reviews.length %> review</p>
+        <% else %>
+          <p id="text-small"><%= @restaurant.reviews.length %> reviews</p>
+        <% end %>
+      </div>
+    <% end %>
+    <%= link_to 'Add a review', new_restaurant_review_path(@restaurant), class: "btn btn-secondary button-review" %>
+  </div>
+    <% if @restaurant.reviews == [] %>
+      <div class="restaurant-review">
+        <p>No reviews available</p>
+      </div>
+    <% else %>
+      <% @restaurant.reviews.each do |review| %>
+          <div class="restaurant-review">
+            <p><%= review.content %></p>
+            <% if review.rating == 0 %>
+              <p>👎</p>
+            <% else %>
+              <p><%= "⭐" * review.rating %></p>
+            <% end %>
+          </div>
+      <% end %>
+    <% end %>
+  </div>
+</div>

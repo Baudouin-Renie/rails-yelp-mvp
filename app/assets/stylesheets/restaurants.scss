@@ -1,0 +1,138 @@
+// Place all the styles related to the restaurants controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+body {
+  margin-bottom: 25px;
+}
+
+#navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 52px;
+  background-color: white;
+  padding: 0 30px 0 15px;
+  font-family: "Helvetica Neue";
+  border: 1px solid rgba(0, 0, 0, 0.08);
+  position: sticky;
+  top: 0;
+  h3 {
+    a {
+      font-weight: normal;
+      font-size: 18px;
+      text-decoration: none;
+      color: #777;
+      &:hover {
+        color: #606060;
+      }
+    }
+  }
+}
+
+#restaurants {
+  width: 1300px;
+  margin: 0 auto;
+  padding-top: 35px;
+  font-family: "Roboto Slab", serif;
+  h1 {
+    font-size: 36px;
+    margin-bottom: 26px;
+  }
+  a {
+    color: rgb(50, 50, 50);
+  }
+}
+
+.box-restaurant {
+  width: 350px;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+  border-radius: 5px;
+  margin: 8px 12px;
+  padding: 12px;
+  background-color: white;
+  h3 {
+    font-size: 25px;
+  }
+  p {
+    margin-bottom: 5px;
+  }
+  a {
+    &:hover {
+      text-decoration: none;
+    }
+  }
+}
+
+#container-new {
+  width: 750px;
+  margin: 0 auto;
+  h1 {
+    padding-top: 38px;
+    font-size: 36px;
+    margin-bottom: 20px;
+  }
+  input {
+    box-shadow: 0 0 2px rgba(0, 0, 0, 0.2);
+  }
+}
+
+.form-button {
+  margin-top: 6px;
+}
+
+#show-restaurant {
+  width: 1300px;
+  margin: 0 auto;
+  padding-top: 35px;
+  font-family: "Roboto Slab", serif;
+  h1 {
+    font-size: 36px;
+    margin-bottom: 28px;
+  }
+}
+
+.restaurant-info {
+  width: 350px;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+  border-radius: 5px;
+  margin: 8px auto;
+  margin-bottom: 25px;
+  padding: 12px;
+  background-color: white;
+  p {
+    margin-top: 5px;
+    margin-bottom: 5px;
+  }
+}
+
+.restaurant-review {
+  width: 350px;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+  border-radius: 5px;
+  margin: 8px auto;
+  margin-top: 15px;
+  padding: 5px 12px;
+  background-color: white;
+  p {
+    margin-top: 5px;
+    margin-bottom: 5px;
+  }
+}
+
+.restaurant-review-mean {
+  width: 350px;
+  text-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+  margin: 8px auto;
+  margin-top: 15px;
+  padding: 5px 12px;
+  p {
+    margin-top: 5px;
+    margin-bottom: 2px;
+  }
+}
+
+#text-small {
+  font-size: 15px;
+  text-shadow: none;
+  margin-top: 6px;
+}

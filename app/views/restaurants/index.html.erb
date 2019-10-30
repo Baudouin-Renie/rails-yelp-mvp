@@ -1,0 +1,16 @@
+<%= render 'navbar' %>
+
+<div id="restaurants">
+  <h1 class="text-center">Restaurants</h1>
+  <div class="container">
+    <div class="row justify-content-center">
+      <% @restaurants.each do |restaurant| %>
+        <div class="box-restaurant">
+          <h3><%= link_to restaurant.name, restaurant_path(restaurant) %></h3>
+          <p>Address: <%= restaurant.address %></p>
+          <p>Category: <%= restaurant.category %> food</p>
+        </div>
+      <% end %>
+    </div>
+  </div>
+</div>
